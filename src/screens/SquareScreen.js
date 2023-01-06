@@ -29,11 +29,15 @@ const SquareScreen = () => {
     }
   };
 
+  const getNewColorValue = (currentValue, change) => {
+    return (currentValue + change < 0 || currentValue + change > 255 ? currentValue: currentValue + change)
+  }
+
   return (
     <View>
       <ColorCounter
-        onIncrease={() => setColor('red', COLOR_INCREMENT)}
-        onDecrease={() => setColor('red', -1 * COLOR_INCREMENT)}
+        onIncrease={() => setRed(getNewColorValue(red, COLOR_INCREMENT))}
+        onDecrease={() => setRed(getNewColorValue(red, -1 * COLOR_INCREMENT))}
         color="Red"
       />
       <ColorCounter
