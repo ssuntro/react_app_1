@@ -59,6 +59,7 @@ const SquareScreen = () => {
           backgroundColor: `rgb(${red},${green},${blue})`,
         }}
       />
+      <TextInput autoCapitalize="none" />
     </View>
   );
 };
