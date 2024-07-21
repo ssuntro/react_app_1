@@ -1,5 +1,2 @@
-# react_app_1
+# React native app
 
-
-1. npm
-2. expo cli
